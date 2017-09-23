@@ -16,6 +16,67 @@ ms.assetid: ce0428f7-0a59-4e72-9237-d907b171af51
 
 # Azure CLI 2.0 release notes
 
+## September 22, 2017
+
+Version 2.0.18
+
+### Resource
+
+* policy: support to show built-in policy definition.
+* policy: support mode parameter for creating policy definitions.
+* managedapp definition: support to create managedapp definition using create-ui-definition and main-template.
+* BREAKING CHANGE: managedapp: Update to latest ARM package, which includes changing resource type from appliances to applications and applianceDefinitions to applicationDefinitions.
+
+### Network
+
+* `lb/public-ip`: Add availability zone support.
+* `express-route`: Add support for IPv6 Microsoft Peering
+* Add `asg` application security group commands.
+* `nic create`: Added `--application-security-groups` support.
+* `nic ip-config create/update`: Added `--application-security-groups` support.
+* `nsg rule create/update`: Added `--source-asgs` and `--destination-asgs` support.
+* `vnet create/update`: Added `--ddos-protection` and `--vm-protection` support.
+* Added command: `vnet-gateway vpn-client show-url`
+
+### Storage
+
+* `storage account network-rule`: Fixed issue where commands may fail after updating the SDK.
+
+### Eventgrid
+
+* Using 0.2.0 of Python SDK
+
+### Sql
+
+* az sql server list --resource-group argument is now optional. If not specified, all sql servers in the entire subscription will be returned.
+* Added --no-wait param to db create, db copy, db restore, db update, db replica create, dw create, and dw update commands
+
+### Keyvault
+
+* Update azure-keyvault SDK to 0.3.6
+
+### Vm
+
+* `vm/vmss/disk create`: support availability zone
+* `vmss create`: Fixed issue where supplying `--app-gateway ID` would fail.
+* `vm create`: Added `--asgs` support.
+* `vm run-command`: support to run commands on remote VMs
+* `vmss encryption`: (PREVIEW) support vmss disk encryptions
+* `vm perform-maintenance`: support to perform maintenance on a vm
+
+### Acs
+
+* add orchestrator-release option for acs preview regions
+
+### Appservice
+
+* webapp: able to update and show authentication settings using "az webapp auth update/show"
+
+### Backup
+
+* Preview release.
+
+
 ## September 11, 2017
 
 Version 2.0.17
