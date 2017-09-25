@@ -22,59 +22,58 @@ Version 2.0.18
 
 ### Resource
 
-* policy: support to show built-in policy definition.
-* policy: support mode parameter for creating policy definitions.
-* managedapp definition: support to create managedapp definition using create-ui-definition and main-template.
-* BREAKING CHANGE: managedapp: Update to latest ARM package, which includes changing resource type from appliances to applications and applianceDefinitions to applicationDefinitions.
+* Added support for showing built-in policy definitions
+* Added support mode parameter for creating policy definitions
+* Added support for UI definitions and templates to `managedapp definition create`
+* BREAKING CHANGE: managedapp: Update to latest ARM package, which includes changing resource type from appliances to applications and applianceDefinitions to applicationDefinitions
 
 ### Network
 
-* `lb/public-ip`: Add availability zone support.
-* `express-route`: Add support for IPv6 Microsoft Peering
-* Add `asg` application security group commands.
-* `nic create`: Added `--application-security-groups` support.
-* `nic ip-config create/update`: Added `--application-security-groups` support.
-* `nsg rule create/update`: Added `--source-asgs` and `--destination-asgs` support.
-* `vnet create/update`: Added `--ddos-protection` and `--vm-protection` support.
-* Added command: `vnet-gateway vpn-client show-url`
+* Added support for availability zone to `network lb` and `network public-ip` subcommands
+* Added support for IPv6 Microsoft Peering to `express-route`
+* Added `asg` application security group commands
+* Added `--application-security-groups` argument to `nic [create|ip-config create|ip-config update]`
+* Added `--source-asgs` and `--destination-asgs` arguments to `nsg rule [create|update]`
+* Added `--ddos-protection` and `--vm-protection` arguments to `vnet [create|update]`
+* Added `network [vnet-gateway|vpn-client|show-url]` commands
 
 ### Storage
 
-* `storage account network-rule`: Fixed issue where commands may fail after updating the SDK.
+* Fixed issue where `storage account network-rule` commands may fail after updating the SDK
 
 ### Eventgrid
 
-* Using 0.2.0 of Python SDK
+* Updated eventgrid SDK to 0.2.0
 
-### Sql
+### SQL
 
-* az sql server list --resource-group argument is now optional. If not specified, all sql servers in the entire subscription will be returned.
-* Added --no-wait param to db create, db copy, db restore, db update, db replica create, dw create, and dw update commands
+* Changed `sql server list` argument `--resource-group` to be optional. If not specified, all sql servers in the subscription will be returned
+* Added `--no-wait` param to `db [create|copy|restore|update|replica create|create|update]` and `dw [create|update]`
 
 ### Keyvault
 
-* Update azure-keyvault SDK to 0.3.6
+* Updated azure-keyvault SDK to 0.3.6
 
-### Vm
+### VM
 
-* `vm/vmss/disk create`: support availability zone
-* `vmss create`: Fixed issue where supplying `--app-gateway ID` would fail.
-* `vm create`: Added `--asgs` support.
-* `vm run-command`: support to run commands on remote VMs
-* `vmss encryption`: (PREVIEW) support vmss disk encryptions
-* `vm perform-maintenance`: support to perform maintenance on a vm
+* Added for support to availability zone to `[vm|vmss|disk] create`
+* Fixed issue where using`--app-gateway ID` with `vmss create` would cause a failure
+* Added `--asgs` argument to `vm create`
+* Added support for running commands on VMs with `vm run-command`
+* [PREVIEW] Added support for VMSS disk encryption with `vmss encryption`
+* Added support for performing maintenance on VMs with `vm perform-maintenance`
 
-### Acs
+### ACS
 
-* add orchestrator-release option for acs preview regions
+* [PREVIEW] Added `--orchestrator-release` argument to `acs create` for ACS preview regions
 
 ### Appservice
 
-* webapp: able to update and show authentication settings using "az webapp auth update/show"
+* Added ability to update and show authentication settings with `webapp auth [update|show]`
 
 ### Backup
 
-* Preview release.
+* Preview release
 
 
 ## September 11, 2017
