@@ -25,7 +25,7 @@ Version 2.0.18
 * Added support for showing built-in policy definitions
 * Added support mode parameter for creating policy definitions
 * Added support for UI definitions and templates to `managedapp definition create`
-* BREAKING CHANGE: managedapp: Update to latest ARM package, which includes changing resource type from appliances to applications and applianceDefinitions to applicationDefinitions
+* BREAKING CHANGE: managedapp: Change resource type from appliances to applications and applianceDefinitions to applicationDefinitions.
 
 ### Network
 
@@ -43,7 +43,7 @@ Version 2.0.18
 
 ### Eventgrid
 
-* Updated eventgrid SDK to 0.2.0
+* Update Azure Event Grid Python SDK to use newer API version "2017-09-15-preview"
 
 ### SQL
 
@@ -52,7 +52,7 @@ Version 2.0.18
 
 ### Keyvault
 
-* Updated azure-keyvault SDK to 0.3.6
+* Support Keyvault commands behind a proxy
 
 ### VM
 
